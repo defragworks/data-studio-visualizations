@@ -43,6 +43,24 @@
           "defaultValue": "#000000"
         }
       ]
+    },
+    {
+      "id": "suggest",
+      "label": "Suggest Min and Max",
+      "elements": [
+        {
+          "type": "TEXTINPUT",
+          "id": "suggestedMin",
+          "label": "Min",
+          "defaultValue": ""
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "suggestedMax",
+          "label": "Max",
+          "defaultValue": ""
+        }
+      ]
     }
   ]
 }

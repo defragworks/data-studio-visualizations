@@ -14,7 +14,6 @@ function drawViz(data) {
   var values = [];
 
   var dataSets = [];
-
   
   var metricLength = 0;
   rowData.forEach(function(row){
@@ -38,7 +37,6 @@ function drawViz(data) {
     });
   }
   
-
   rowData.forEach(function(row){
     labels.push(row['barDimension'][0]);
     values.push(row['barMetric'][0]);
@@ -48,6 +46,20 @@ function drawViz(data) {
     }
   });
 
+  // options
+  var scale = {
+    ticks: {}
+  };
+  
+  if (data.style.suggestedMin.value && parseFloat(data.style.suggestedMin.value) > 0) {
+    scale.ticks.suggestedMin = parseFloat(data.style.suggestedMin.value);
+  }
+
+  if (data.style.suggestedMax.value && parseFloat(data.style.suggestedMax.value) > 0) {
+    scale.ticks.suggestedMax = parseFloat(data.style.suggestedMax.value);
+  }
+  
+
   var ctx = canvasElement.getContext('2d');
  
   var myChart = new Chart(canvasElement, {
@@ -55,15 +67,10 @@ function drawViz(data) {
     data: {
       labels: labels,
       datasets: dataSets
-      /* datasets: [{
-        label: 'test',
-        data: values
-      }]*/
     },
     options: {
       responsive: true,
-      scales: {
-      }
+      scale: scale
     }
   });
 }
