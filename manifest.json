@@ -1,0 +1,21 @@
+{
+  "name": "Take a Look Community Visualization",
+  "logoUrl": "https://url",
+  "organization": "Take a Look Project",
+  "supportUrl": "https://url",
+  "packageUrl": "https://url",
+  "privacyPolicyUrl": "https://url",
+  "description": "Visualization with Radar Chart",
+  "devMode": true,
+  "components":[{
+    "id": "radar",
+    "name": "Radar Chart",
+    "iconUrl": "https://url",
+    "description": "Radar chart",
+    "resource": {
+      "js": "gs://take-a-look-visualizations/viz/myViz.js",
+      "config": "gs://take-a-look-visualizations/viz/myViz.json",
+      "css": "gs://take-a-look-visualizations/viz/myViz.css"
+    }
+  }]
+}
