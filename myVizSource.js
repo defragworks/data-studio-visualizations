@@ -4,10 +4,6 @@ canvasElement.id = 'myChart';
 document.body.appendChild(canvasElement);
 
 function drawViz(data) {
-  const margin = {top: 10, bottom: 50, right: 10, left: 10 };
-  const height = dscc.getHeight() - margin.top - margin.bottom;
-  const width = dscc.getWidth() - margin.left - margin.right;
-
   let rowData = data.tables.DEFAULT;
 
   var labels = [];
@@ -59,9 +55,7 @@ function drawViz(data) {
     scale.ticks.suggestedMax = parseFloat(data.style.suggestedMax.value);
   }
   
-
   var ctx = canvasElement.getContext('2d');
- 
   var myChart = new Chart(canvasElement, {
     type: 'radar',
     data: {
