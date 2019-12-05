@@ -5,7 +5,7 @@
       "label": "Concepts",
       "elements": [
         {
-          "id": "barDimension",
+          "id": "radarDimension",
           "label": "Dimension",
           "type": "DIMENSION",
           "options": {
@@ -14,7 +14,7 @@
           }
         },
         {
-          "id": "barMetric",
+          "id": "radarMetric",
           "label": "Metric",
           "type": "METRIC",
           "options": {

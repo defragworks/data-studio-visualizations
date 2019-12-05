@@ -1,6 +1,6 @@
 var canvasElement = document.createElement('canvas');
 var ctx = canvasElement.getContext('2d');
-canvasElement.id = 'myChart';
+canvasElement.id = 'radarChart';
 document.body.appendChild(canvasElement);
 
 function drawViz(data) {
@@ -13,7 +13,7 @@ function drawViz(data) {
   
   var metricLength = 0;
   rowData.forEach(function(row){
-    metricLength = row['barMetric'].length;
+    metricLength = row['radarMetric'].length;
   });
 
   for (var i = 0; i < metricLength; i++) {
@@ -27,18 +27,18 @@ function drawViz(data) {
     }
 
     dataSets.push({
-      label: data.fields['barMetric'][i].name,
+      label: data.fields['radarMetric'][i].name,
       data: [],
       backgroundColor: color
     });
   }
   
   rowData.forEach(function(row){
-    labels.push(row['barDimension'][0]);
-    values.push(row['barMetric'][0]);
+    labels.push(row['radarDimension'][0]);
+    values.push(row['radarMetric'][0]);
     
     for (var i = 0; i < metricLength; i++) {
-      dataSets[i].data.push(row['barMetric'][i]);
+      dataSets[i].data.push(row['radarMetric'][i]);
     }
   });
 
@@ -56,7 +56,7 @@ function drawViz(data) {
   }
   
   var ctx = canvasElement.getContext('2d');
-  var myChart = new Chart(canvasElement, {
+  var radarChart = new Chart(canvasElement, {
     type: 'radar',
     data: {
       labels: labels,
