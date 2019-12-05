@@ -1,12 +1,12 @@
 {
-  "name": "Take a Look Community Visualization",
+  "name": "defrag.works visualization",
   "logoUrl": "https://storage.googleapis.com/take-a-look-visualizations/icons/visualization_icon.png",
   "organization": "defrag.works",
   "supportUrl": "https://github.com/take-a-look/data-studio-visualizations",
   "packageUrl": "https://github.com/take-a-look/data-studio-visualizations",
   "privacyPolicyUrl": "https://github.com/take-a-look/data-studio-visualizations/wiki/Privacy-Policy",
   "description": "This visualization can draw data with radar chart using Chart.js library. Max number of metrics is up 2, and this possible to change background color for each metric.",
-  "devMode": true,
+  "devMode": false,
   "components":[{
     "id": "radar",
     "name": "Radar Chart",
