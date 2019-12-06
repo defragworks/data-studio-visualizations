@@ -4,7 +4,7 @@
   "organization": "defrag.works",
   "supportUrl": "https://github.com/take-a-look/data-studio-visualizations/issues",
   "packageUrl": "https://github.com/take-a-look/data-studio-visualizations",
-  "privacyPolicyUrl": "https://github.com/take-a-look/data-studio-visualizations/wiki/Privacy-Policy",
+  "privacyPolicyUrl": "https://github.com/take-a-look/data-studio-visualizations/wiki/Privacy-Policy,-Terms-and-Conditions",
   "description": "This visualization provides radar chart using Chart.js library.",
   "devMode": false,
   "components":[{
