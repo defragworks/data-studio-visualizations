@@ -59,6 +59,7 @@ function drawViz(data) {
       datasets: dataSets
     },
     options: {
+      animation: { duration: 0 },
       responsive: true,
       scale: scale
     }
