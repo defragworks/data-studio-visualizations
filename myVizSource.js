@@ -19,12 +19,8 @@ function drawViz(data) {
   for (var i = 0; i < metricLength; i++) {
     var color = 'rgba(0, 0, 0, 0.1)';
 
-    if (i == 0) {
-      color = data.style.fillColor1.value ? data.style.fillColor1.value.color + '1E' : data.style.fillColor1.defaultValue + '1E';
-    }
-    else if (i == 1) {
-      color = data.style.fillColor2.value ? data.style.fillColor2.value.color + '1E' : data.style.fillColor2.defaultValue + '1E';
-    }
+    var fillColor = data.style['fillColor' + (i+1).toString()];
+    color = fillColor.value ? fillColor.value.color + '1E' : fillColor.defaultValue + '1E';
 
     dataSets.push({
       label: data.fields['radarMetric'][i].name,
